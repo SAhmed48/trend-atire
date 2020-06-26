@@ -22,7 +22,7 @@ const Header = () => (
                 About Us
             </Link>
 
-            <Link className='option' to='/shop'>
+            <Link className='option' to='/signin'>
                 Sign in
             </Link>
         </div>
