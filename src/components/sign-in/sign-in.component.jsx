@@ -22,6 +22,7 @@ class SignIn extends React.Component {
     }
 
     handleOnChange = event => {
+        event.preventDefault();
         const {value, name } = event.target;
         this.setState({[name]: value });
     }
@@ -48,10 +49,13 @@ class SignIn extends React.Component {
                         name='password' 
                         label='password'
                         required />
-
-                    <CustomButton type='submit'> Sign in</CustomButton>
+                        <div className='sign-in-button'>
+                            <CustomButton type='submit'> Sign in</CustomButton>
+                            <CustomButton onClick={signInWithGoogle} isGoogleSignIn> {' '} Sign in with Google {' '} </CustomButton>
+                        </div>
+                    
                 </form>
-                <CustomButton onClick={signInWithGoogle}> {' '} Sign in with Google {' '} </CustomButton>
+                
             </div>
         )
     }
